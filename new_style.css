@@ -1,0 +1,232 @@
+body {
+  margin: 0px;
+}	
+
+.header-block {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+}
+
+.header-block_arete{
+  height: 220px;
+  width: 100%;
+  background-color: white;
+}
+
+.header-block_arete_reduced{
+  height: 150px;
+  width: 100%;
+  background-color: white;
+}
+
+
+.main_logo {
+  height: auto;
+  max-width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main_logo_arete {
+  height: auto;
+  max-width: 11%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small_logo_arete {
+  height: auto;
+  width: 115px;
+  display: block;
+  margin-left: 35px;
+  margin-bottom: 5px;
+}
+.header_info_arete {
+	position: absolute;
+	top: 160px;
+	right: 0;
+	float: right;
+	width: 300px;
+    height: 90px;
+	margin: 8px 28px 0 0;
+	z-index: 0;
+}
+
+
+hr.header { 
+  border-top: 3px solid #5FC8ED
+}
+
+.pai-bg {
+ height: 700px;
+ width: 100%;
+ background-image: url("../images/adults-business-coffee.jpg");
+ background-repeat: no-repeat;
+ background-size: 100%;
+ background-color: #ffffff;
+ opacity: 0.7;
+}
+
+.login {
+  position: relative;
+  height: auto;
+  width: 260px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;	
+  padding: 150px 0;
+  font-family: Arial;
+  z-index: 999;
+}
+
+.title {
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14;
+  font-weight: bold;  
+}
+
+.textbox {
+  height:30px;
+  width:250px;
+  font-size:12pt;
+  font-weight: bold;    
+  color: #133562;
+  margin-top: 5px;
+  margin-right: 5px;
+  padding-left: 5px;
+  border-color: #133562;
+}
+
+.button_login {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;	
+  background-color: #ffffff;
+  border: 1px solid #133562;
+  color: #133562;
+  padding: 5px 20px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 18px;
+  float: right;
+}
+
+.button_login:hover {
+  background-color: #133562;
+  color: white;
+}
+
+.footer {
+  background-color: #133562;
+  border: none;
+  height: 80px;
+  width: 100%;  
+}
+
+.subfooter {
+  background-color: #5FC8ED;
+  font-family: Arial;
+  font-size: 10pt;
+  border: none;
+  height: 35px;
+  width: 100%;  
+  color: #ffffff;
+}
+
+#footer-info {
+  padding: 10px 0 0 200px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.tbl_link {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;	
+  color: #000000;
+  padding: 2px 5px 2px 5px;
+  border: 1px solid #133562;
+  text-decoration: none;
+}
+
+.tbl_link:hover {
+  color: white;	
+  background-color: #133562;  
+  text-decoration: none;
+  text-decoration-style: none;
+}
+
+#login_error { 
+  padding: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: red;
+}
+.CopayMenuDivs {
+  border: 1px solid;
+  width :600px;
+  height :330px;
+}
+
+.CopayDivHeader{
+  height :35px;
+  line-height:35px;
+  font-weight: bold;
+  font-size:12pt;
+  background-color: #5FC8ED;
+  text-align: center;
+}
+
+.ReportMenuDivs {
+  border: 1px solid;
+  width :250px;
+  height :200px;
+}
+
+.ReportDivHeader{
+  height :35px;
+  line-height:35px;
+  font-weight: bold;
+  font-size:12pt;
+  background-color: #5FC8ED;
+  text-align: center;
+}
+.div_hide {
+  display: none;
+}
+.DocusignSingle-MenuDivs {
+  border: 1px solid;
+  width :250px;
+  height :400px;
+  width  :500px;
+}
+
+.DocusignSingle-DivHeader{
+  width  :500px;
+  height :35px;
+  line-height:35px;
+  font-weight: bold;
+  font-size:12pt;
+  background-color: #5FC8ED;
+  text-align: center;
+}
+.CopayUL{
+	padding:0px 0px 0px 20px;
+	margin :10px 0px 0px 0px;
+
+}
+
+.ReportUL{
+	padding:0px 0px 0px 20px;
+	margin :10px 0px 0px 0px;
+
+}

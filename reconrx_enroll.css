@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*
+
+Josh Herder, March 2013.
+
+CSS Notes:
+-----------------------------------------------------
+For use with rrx enrollment process. Contains any additional styles that I didn't want to cram into the main stylesheet.
+-----------------------------------------------------
+
+*/
+
+.tab20 {
+	padding-left: 20px;
+}
+
+.indent {
+	margin-left: 15px;
+}
+
+.fade {
+	color: #AAA;
+	margin: -15px 0px 15px 15px;
+}
+
+.error {
+	color: #F00;
+}
+
+.notice {
+	color: #F00;
+	font-size: 18px;
+}
+
+.download {
+	margin: 0px 0px 0px 20px;
+	padding-top: 20px;
+	font-size: 20px;
+}
+.download img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.programs {
+	width: 640px;
+}
+
+.tpp {
+	width: 150px;
+	background-color: #DDD;
+	font-weight: bold;
+}
+
+.plan {
+	background-color: #DDD;
+}
+
+.accept {
+	width: 160px;
+	background-color: #fccc40;
+}
+
+.review_page {
+	position: relative;
+	width: 630px;
+	margin: 15px 4px 10px 4px;
+	padding: 8px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+.servicesbox {
+	position: relative;
+	width: 600px;
+	height: 100%;
+	margin: 4px 4px 10px 4px;
+	padding: 8px 8px 20px 8px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+.review_link {
+	position: relative;
+	float: right;
+}
+
+.review_page_title {
+	padding: 10px 0px 5px 0px;
+}
+
+.review_title {
+	font-family: 'Oxygen', arial, helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	margin: 0px 0px 5px 0px;
+	color:#000;
+}
+
+.data {
+	margin: 0px 0px 0px 8px;
+	padding: 0px;
+	min-height: 15px;
+}
+
+.rrx-generic-wrapper {
+	position: relative;
+	width: 100%;
+	margin: 4px 10px 10px 10px;
+}
+
+/*Two Column Divs Layout*/
+.rrx-two-column-wrapper {
+	position: relative;
+	width: 100%;
+	margin: 4px 10px 10px 10px;
+}
+
+.rrx-two-column {
+position: relative;
+float: left;
+width: 46%;
+padding: 0% 4% 0% 0%;
+}
+
+.rrx-two-column-small {
+position: relative;
+float: left;
+width: 18%;
+padding: 0% 4% 0% 0%;
+}
+
+.rrx-two-column-large {
+position: relative;
+float: left;
+width: 70%;
+padding: 0% 4% 0% 0%;
+}
+
+.field_title {
+	font-family: 'Oxygen', arial, helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	margin: 0px 0px 5px 0px;
+	color:#000;
+}
+
+
+/* Text Inputs */
+.rrx-input-text-form {  
+	margin: 0px 0px 25px 0px;
+	padding: 7px;
+	border: 1px solid #aaa;
+	width: 250px;
+
+	border-radius: 3px;  
+	box-shadow: inset 0 1px 7px rgba(0, 0, 0, 0.1);  
+}  
+	  
+.rrx-input-text-form:focus {  
+	outline: none;  
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);  
+} 
+
+.rrx-dropdown-form {
+	padding: 7px;
+	margin: 0px 0px 25px 0px;
+}
+
+.clear {
+position: relative;
+clear: both;
+}
+
+.checkbox {
+float: left;
+padding: 5px 0px 0px 0px;
+}
+
+.checkboxcopy {
+float: left;
+padding: 0px 0px 0px 10px;
+}
+
+
+.small_example {
+	font-size: 9px; 
+	color: #777;
+}

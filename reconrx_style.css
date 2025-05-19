@@ -1,0 +1,992 @@
+@charset "UTF-8";
+/*
+
+Josh Herder, August 2012.
+Updated: April 2014.
+
+CSS structure is as follows:
+(for quick reference, search for "#. Recon" where "#" is the section number you want)
+-----------------------------------------------------
+1. General site (body, h1, etc)
+2. Table Styles (alignment, bg_colors, table classes)
+-----------------------------------------------------
+3. Recon Backend/Database Section (wrapper, classes, mainbody styles)
+4. Recon Backend/Databsae Nav (left column navigation bar styles)
+5. Recon Backend/Database Footer (backend footer)
+-----------------------------------------------------
+
+-----------------------------------------------------
+9. Form Styles
+
+*/
+
+/*
+	background-image: url("/images/cream_pixels.png");
+    background-repeat: repeat;
+*/
+
+body { 
+	font-size: 14px; 
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #133562;
+	margin: 0 auto 0;
+}	
+
+h1 { 
+	font-family: Times New Roman, Times;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: normal;
+	color: #133562;
+	margin: 0 0 20px 0; 
+}
+
+.page_title {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+h2 { 
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;;
+	font-size: 18px; 
+	font-weight:bold; 
+	color: #133562;
+}
+
+h3 { font-size: 14px; font-weight:bold; color: #133562; }
+
+img { border:0;}
+
+.left { float: left; }
+.right { float: right; }
+.center { text-align: center; }
+
+.align_right, .money {
+	text-align: right;
+	}
+	
+.align_center {
+	text-align: center;
+	}
+	
+.align_left {
+	text-align: left;
+	}
+
+.indent {
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+
+.highcharts-title {
+}	
+
+hr {
+  border: 1px solid #5FC8ED;
+}	
+
+.notification {
+	width: 92%;
+	margin: 6px 2% 8px 2%;
+	padding: 2px 2% 2px 2%;
+	background-color: #5FC8ED;
+	color: #FFF;
+}
+.white {
+	background-color: #FFF;
+	color: #133562;	
+}
+.emergency {
+	background-color: #5FC8ED;
+}
+
+#loading {
+	position: relative;
+	width: 100%; 
+	border: 1px solid #000;
+	border-radius: 10px; 
+}
+#loading p, #loading img {
+	display: block;
+	margin: 0 auto 0;
+	text-align: center;
+}
+#loading img {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* ................. 2. Table Styles ................... */
+
+table {
+	border-top: 0px solid #999;
+	border-bottom: 0px solid #133562;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+
+table.main {
+	border: 0px solid #133562;
+	padding: 0px;
+	}
+	
+table.profile, table.full {
+	width: 100%;
+	}
+	
+th {
+    font-size: 120%;
+	font-weight: bold;	
+	text-align:left;
+	margin: 0px;
+	padding:3px 6px 3px 3px;
+	border-top:0px solid #133562;
+	}
+
+td {
+	margin: 0px;
+	padding:3px 6px 3px 3px;
+	border-top:1px solid #133562;
+	}
+	
+table.borders td {
+	border: 1px solid #CCC;
+}
+	
+/* .... table border styles .... */
+
+td.multi_table, th.multi_table {
+	padding: 0px;
+	border: 0px;
+}
+
+td.no_border, th.no_border {
+	border: 0px;
+}
+
+td.no_border_right, th.no_border_right {
+	border: 0px;
+	text-align: right;
+}
+
+/* .... table with no borders anywhere .... */
+
+	table.noborders {
+		border: 0px;
+		padding: 0px;
+		}
+
+	table.noborders td {
+		text-align:left;
+		padding:3px 6px 3px 3px;
+		border: 0px;
+		}
+		
+	table.noborders th {
+		text-align:left;
+		padding:3px 6px 3px 3px;
+		border: 0px;
+		}
+		
+/* .... table with smaller text .... */
+
+	table.smalltext {
+		border: 0px;
+		padding: 0px;
+		}
+
+	table.smalltext td {
+		text-align:left;
+		font-size: 12px;
+		padding:0px 6px 0px 3px;
+		border: 0px;
+		}
+		
+	table.smalltext th {
+		text-align:left;
+		font-size: 12px;
+		padding:0px 6px 0px 3px;
+		border: 0px;
+		}		
+	
+/* .... table color styles .... */
+
+.red_font  {
+	color: #f9152f;
+}
+	
+.red  {
+	background-color: #f9152f;
+}
+
+.yellow  {
+	background-color: #fad201;
+}
+
+.grey  {
+	background-color: #f2f2f2;
+}
+
+.blue  {fs
+	background-color: #6796f5;
+}
+
+.green {
+	background-color: #47c746;
+}
+.tan  {
+	background-color: #f5f0df;
+}
+
+.navy {
+	background-color: #133562;
+}	
+
+.lj_blue {
+	background-color: #5FC8ED;
+}
+
+.lj_blue_table {
+	background-color: #d1effa;
+}	
+
+.lj_blue_bb {
+	border-bottom: 2px solid #5FC8ED;
+}	
+
+.lj_blue_bt {
+	border-top: 2px solid #5FC8ED;
+}	
+
+.archive {
+	background-color: #EEE;
+	padding: 0px 0px 5px 0px;
+	margin: 10px 0px 10px 0px;
+	border-radius: 5px;
+}
+
+.padding {
+	padding: 10px;
+}
+
+.stop_light {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;	
+}	
+
+/* ................. 3. Recon Backend/Database Section ................... */
+
+div#wrapper{ 
+	width: 1024px;
+	margin: 0 auto 0;
+	}
+
+div#reconheader {
+	position: relative;
+	width: 100%; 
+	margin:0 0 0 0;
+	border-bottom: 1px solid #000;
+	}
+
+div#reconheader p {
+	line-height: 20px;
+	}
+	
+.logo {
+	float: left;
+}
+	
+.header_background {
+	width: 450px;
+	max-width: 580px;
+	margin: 0px 0px 5px 10px;
+	}
+	
+.text_header {
+	display: none;
+	}
+	
+#membersheaderborder {
+    margin-top: 20px;
+	padding:0px; 
+	border-top: 3px solid #5FC8ED;	
+}
+
+.header_info {
+	position: absolute;
+	top: 90px;
+	right: 0;
+	float: right;
+	width: 300px;
+    height: 90px;
+	margin: 8px 28px 0 0;
+	z-index: 0;
+}
+
+#header_bg {
+	position: relative;
+	height: 40px;	
+	width: 900px;
+	padding-top: 15px;
+	margin: auto;
+	margin-top: 20px;
+	background: #5FC8ED;
+	text-align: center;
+	font-size: 18px;
+	color: #FFF;
+	z-index: 300;
+}
+
+#wrapper {
+	position: relative;
+	background: #FFF;
+	/* background:#fff url('../images/mainbody_bg.jpg') no-repeat right top; */
+	margin: 0 auto;
+	padding: 10px;
+	width: 880px;
+	min-height: 350px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#detail_wrapper {
+	position: relative;
+	background: #FFF;
+	/* background:#fff url('../images/mainbody_bg.jpg') no-repeat right top; */
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;	
+	padding: 10px;
+	width: 880px;
+	min-height: 350px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#mainbody_front {
+    float: left;
+    margin-top: 0;
+    padding: 15px 5px 15px 22px;
+    position: relative;
+    text-align: left;
+    width: 650px;
+    z-index: 3;
+}
+
+#mainbody_front a {
+  color: #133562;
+}
+
+#mainbody_front a:hover {
+  text-decoration: underline;
+}
+
+.pharm_name {
+	display: inline-block;
+	float: right;
+	background: #FFF;
+	margin: 20px 0px 0px 0px;
+	padding: 5px 10px 0px 10px;
+	font-style: normal;
+	color: #133562;
+	text-align: right;
+	}
+.pharm_ncpdp {
+	margin: 1px 4px 0px 0px;
+	padding: 0px;
+	font-size: 10px;
+	font-style: normal;
+	color: #133562;
+	text-align: right;
+	}
+	
+.demo {
+	font-size: 9px;
+	font-style: italic;
+	color: #760308;
+	background: #FFF;
+	white-space: nowrap;
+	position: absolute;
+	top: 60px;
+	left: 103px;
+	}
+.menuoption {
+	font-size: 9px;
+	font-style: italic;
+	color: #760308;
+	background: #FFF;
+	white-space: nowrap;
+	position: absolute;
+	top: 60px;
+	left: 65px;
+	}
+	
+.profileaddress {
+	display: none;
+	}
+
+div#mainbody-recon { 
+	width: 100%;
+	padding-bottom:20px; 
+	}
+
+div#textarea {
+	float: left;
+	width:73%;
+	text-align:left; 
+	margin-top:15px;
+	margin-left: 15px;
+	padding-right:1px;  
+	line-height:20px;
+	}
+
+a {
+	color: #133562;		
+}
+	
+div#mainbody-recon div#textarea a { 
+	text-decoration:none;
+}
+	
+div#mainbody-recon div#textarea a:hover { 
+	text-decoration:underline;
+}	
+	
+div#mainbody-recon div#textarea table.secondary a { 
+	text-decoration:none;
+	color: #133562;
+}
+	
+div#mainbody-recon div#textarea table.secondary a:hover { 
+	text-decoration:underline;
+}
+
+div#textarea .text_white {
+	color: #FFF;
+}	
+
+div#textarea .text_navy {
+	color: #133562;
+}	
+
+div#textarea .text_lj_blue {
+	color: #5FC8ED;
+}	
+
+.small_logo {
+  height: auto;
+  width: 190px;
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+	
+/* Dashboard Styles - Member's Section Home Page */
+.dashboard_rollingDIR {
+	position: relative;
+	float: right;
+	width: 260px;
+	padding: 10px;
+	padding-right: 5%;
+	margin: 10px 10px 0px 0px;
+	min-height: 240px;
+	border: none
+}
+.dashboard_aging {
+	position: relative;
+	float: right;
+	width: 220px;
+	padding: 10px;
+	margin: 10px 10px 0px 0px;
+	min-height: 240px;
+	border: none
+}
+
+.dashboard_rollingDIR h2 {
+	margin: 0px 0px 7px 0px;
+	padding: 0px;
+	text-align: left;
+}
+
+.dashboard_aging h2 {
+	margin: 0px 0px 7px 0px;
+	padding: 0px;
+	text-align: left;
+}
+
+.dashboard_aging_category {
+    height: 28px;    
+	position: relative;
+	display: block;
+	background: #5FC8ED;
+	color: #FFF;	
+	margin-bottom: 5px;
+	font-size: 16px;
+}	
+
+.dashboard_aging_value {
+	position: relative;
+	float: left;
+	display: inline-block;
+	padding: 5px;
+	text-align: right;
+	font-weight: 800;
+}
+
+.dashboard_dir_category {
+        height: 28px;    
+	position: relative;
+	display: block;
+	background: #133562;
+	##background: #5FC8ED;
+	color: #FFF;	
+	margin-bottom: 5px;
+	text-align: left;
+	font-size: 16px;
+}	
+
+.dir_date {
+	position: relative;
+	display: inline-block;
+}
+
+.dashboard_dir_value {
+	position: relative;
+	float: right;
+	display: inline-block;
+	padding: 5px;
+	text-align: left;
+	font-weight: 800;
+}
+.dirvalue {
+	text-align: right;
+	color: #FFF;
+	padding-bottom: 5px;
+	font-size: 16px;
+	
+}
+
+.value5 {
+	background: #5FC8ED;
+	color: #FFF;
+}
+.value6 {
+	background: #5FC8ED;
+	color: #FFF;
+}
+.value7 {
+	background: #5FC8ED;
+	color: #FFF;
+}
+.value8 {
+	background: #5FC8ED;
+	color: #FFF;
+}
+
+.dashboard_aging_header {
+	position: relative;
+	display: inline-block;
+    float: right;
+	font-size: 11px;
+	margin: 5px;
+	text-align: left;
+}
+.dashboard_dir_header {
+	position: relative;
+	display: inline-block;
+        float: left;
+	font-size: 16px;
+	margin: 5px;
+	text-align: left;
+}
+
+
+.column_full {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.column_full_box {
+	position: relative;
+	float: left;
+	width: 93%;
+	padding: 5px 1% 5px 1%;
+	margin: 5px 2% 5px 2%;
+	
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 10px;
+}
+
+.column {
+	position: relative;
+	float: left;
+	width: 50%;
+}
+.column_box {
+	position: relative;
+	float: left;
+	width: 89%;
+	padding: 5px 1% 5px 1%;
+	margin: 5px 4% 5px 4%;
+	background: #5FC8ED;
+	color: #FFF;
+}
+
+.posting_title {
+	font-size: 12px;
+	color: #5FC8ED;
+}
+.posting_value, .posting_date {
+	font-size: 18px;
+	font-weight: 800;
+}
+
+.demo_title {
+	position: relative;
+	float: left;
+	min-width: 120px;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: left;
+}
+.demo_value {
+	position: relative;
+	float: right;
+	font-size: 15px;
+	text-align: right;
+}
+
+/* Interventions */
+/*
+.int_block {
+	margin: 0 0 15px 0;
+}
+
+.int_pri {
+	position: relative;
+	width: 750px;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #777;
+	border-radius: 10px 10px 10px 10px;
+}
+.int_header {
+	position: relative;
+	padding: 3px;
+	border-radius: 9px 9px 0 0;
+}
+.int_header_open {
+	background: #ffa5a6;
+}
+.int_header_closed {
+	background: #C0FFB2;
+}
+.int_comments {
+	position: relative;
+	padding: 5px;
+}
+
+.int_update {
+	position: relative;
+	width: 710px;
+	margin: 0 0 0 30px;
+	padding: 0px;
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+.int_update_header {
+	position: relative;
+	background: #DDD;
+	padding: 3px;
+	font-size: 11px;
+}
+.int_update_comments {
+	position: relative;
+	padding: 5px 5px 5px 15px;
+}
+*/
+
+	
+/*ADMIN SCREEN ADDITIONS */
+.pharm_select {
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+}
+
+.pharm_select h2 {
+	margin: 0px;
+	padding: 10px 0px 10px 30px;
+	color: #000;
+	background-image:url('../images/arrow.jpg');
+	background-repeat:no-repeat;
+	background-position: left;
+	display: block;
+	}
+	
+.pharm_select p {
+	padding-top: 0px;
+	margin-top: 0px;
+	padding-left: 35px;
+	}
+	
+.pharm_select input[type="submit"]{
+    background: none;
+    border: none;
+    color: #760308;
+	font-size: 18px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+	
+	
+/* ................. 4. Recon Backend/Database Nav ................... */
+
+div#mainbody-recon div#leftcolumn-sidenav { 
+	font-size: 14px;
+	position: relative;
+	float:left;
+	background: #f2f2f2;
+	width:200px;
+	margin: 0px;
+	padding: 0px;
+	text-align:center;
+}
+
+div#mainbody-recon div#leftcolumn-sidenav ul:not(.MenuUL) { 
+    height: 650px;
+	list-style-type:none;
+	margin: 0px; 
+	padding:0; 
+	border: 0px;
+}
+	
+div#mainbody-recon div#leftcolumn-sidenav ul li{ 
+	position: relative;
+	display: block;
+	padding: 0px; 
+    text-align: center;
+}
+
+div#mainbody-recon div#leftcolumn-sidenav ul li a { 
+  color:#133562;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 8px 0px;
+  text-decoration: none;
+}
+
+#leftcolumn-sidenav ul li a.highlight { 
+	color:#ffffff;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+div#mainbody-recon div#leftcolumn-sidenav ul li a:hover { 
+	color:#ffffff;
+	background-color: #5FC8ED;
+	text-decoration:none;	
+}
+
+.leftcolumn_title {
+	margin: 0 0 0 0; 
+	padding: 10px;
+	background: #5FC8ED;
+	color:#ffffff;
+}
+
+.leftcolumn_title input[type="submit"]{
+    background: none;
+	width: 100%;
+	padding: 0 0 0 6px;
+	margin: 0;
+    border: none;
+    background-color: #5FC8ED;
+	color: #ffffff;
+	font-size: 20px;
+	font-family: Times;
+	font-weight: normal;
+	text-align: center;	
+    text-decoration: none;
+    cursor: pointer;
+}
+	
+/* ................. 5. Recon Backend/Database Footer ................... */
+	
+div#reconfooter { 
+	width:810px; 
+	margin-top: 5px;
+	margin-left:200px; 
+	font-size:10px; 
+	color:#133562; 
+	padding: 4px 0 30px 0;
+	}
+
+div#reconfooter a {
+	color: #133562;
+}
+
+div#reconfooter a:hover {
+	text-decoration: underline;	
+}
+
+/* ................. 9. Form Styles ................... */
+
+/*Button*/
+.button-form {  
+	display: inline-block;  
+	background: #fafafa;  
+	background: -webkit-linear-gradient(top,  #fafafa 0%,#f4f4f4 40%,#e5e5e5 100%);  
+	border: 1px solid #aaa;  
+	padding: 5px 14px;  
+	color: #444;  
+	font-family: Helvetica, sans-serif;  
+	font-size: 12px;  
+	border-radius: 3px;  
+	box-shadow: 0 1px 3px #ddd;  
+	-webkit-transition: 0.2s linear;  
+}  
+	  
+.button-form:not(.button-disabled):hover {  
+	background: #fefefe;  
+	background: -webkit-linear-gradient(top,  #fefefe 0%,#f8f8f8 40%,#f8f8f8 100%);  
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);  
+	border: 1px solid #aaa;  
+}  
+	  
+.button-form:not(.button-disabled):active {  
+	background: #f4f4f4;  
+	background: -webkit-linear-gradient(top,  #f4f4f4 0%,#efefef 40%,#dcdcdc 100%);  
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);  
+}
+
+/* Input Text */
+.input-text-form {  
+	padding: 7px;
+	border: 1px solid #133562;  
+	color: #133562;
+	border-radius: 3px;  
+	box-shadow: inset 0 1px 7px rgba(0, 0, 0, 0.1);  
+}  
+	  
+.input-text-form:focus {  
+	outline: none;  
+	box-shadow: inset 0 1px 1px rgba(250, 0, 0, 0.3);  
+}  
+
+.select-text-form {
+	border: 1px solid #133562;
+	color: #133562;
+	border-radius: 3px;  
+	box-shadow: inset 0 1px 7px rgba(0, 0, 0, 0.1);
+  height: 30px;
+}  
+
+input.error {
+  border-color: red;
+}
+select.error {
+  border-color: red;
+}
+p.error {
+  color: red;
+}
+
+
+#tablef_wrapper input[type=submit] {
+	display: inline-block;  
+	background: #f2f2f2;  
+	background: -webkit-linear-gradient(top,  #f2f2f2 0%,#f4f4f4 40%,#e5e5e5 100%);  
+	border: 1px solid #aaa;  
+	padding: 4px 14px;  
+	color: #133562;  
+	font-family: Helvetica, sans-serif;  
+	font-size: 15px;  
+	border-radius: 10px;  
+	box-shadow: 0 1px 3px #ddd;  
+	-webkit-transition: 0.2s linear;  
+	cursor: pointer;
+}
+
+
+/* CSS Overlay */
+.overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+	 background: rgba(100, 100, 100, 0.8);
+}
+.overlay div {
+     width:300px;
+	 max-width: 95%;
+     margin: 100px auto;
+     background-color: #fff;
+     border:1px solid #000;
+     padding:15px;
+     text-align:center;
+	 border-radius: 10px;
+}
+
+
+@media print {
+	
+	body, #wrapper, #reconheader, #mainbody-recon, #textarea, #textarea2 {
+		float: none !important; 
+		width: 100% !important; 
+		margin: 0;
+		padding: 0;
+		background: none;
+	}
+	
+	#leftcolumn-sidenav, #reconfooter, .demo {
+		width: 0px;
+		display: none;
+	}
+	
+	img, .header_background {
+		max-width: 250px !important;
+	}
+	
+	.pharm_name {
+		position: relative;
+		float: right;
+		margin: 10px 0 0 0;
+		padding: 2px;
+		background: none;
+		font-size: 12px;
+		max-width: 350px;
+	}
+
+}
+
+.vendor_block {
+  display: block;
+  width: 700px;
+  margin: 5px;
+}
+
+.vendor_link {
+	width: auto;
+	float: left;
+	margin: 15px;
+}
+
+td.details-control {
+	background: url('../images/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+	background: url('../images/details_close.png') no-repeat center center;
+}
+

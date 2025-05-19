@@ -1,0 +1,1060 @@
+@charset "UTF-8";
+
+/* Josh Herder, October 2013. */
+
+/* ---CSS RESET - THANKS ERIC MEYER!------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* Import Google Font 
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,400italic,700,300);
+*/
+
+body {
+	margin: 0px;
+	width: 100%;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 400;
+	line-height: 22px;
+	font-size: 14px;
+	background-color: #133562;
+	color: #133562;
+}
+
+p {
+	line-height: 22px;
+	margin: 2px 0px 15px 0px;
+}
+
+strong {
+	font-weight: bold;
+}
+	
+h1 {
+	font-size: 25px;
+	line-height: 28px;
+	padding: 0px 0px 10px 0px;
+	margin: 0px;
+}	
+
+h2 {
+	font-size: 18px;
+	line-height: 24px;
+	color: #133562;
+	padding: 0px;
+	margin: 0px;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 28px;
+	padding: 5px 0px 10px 0px;
+	margin: 0px;
+}
+	
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+img { 
+	border:0;
+	max-width: 100%;
+}
+
+ul li {
+	margin: 0px 0px 15px 20px;
+}
+
+ul ul {
+	margin: 0px 0px 15px 30px;
+}
+
+ol li{
+	margin: 0px 0px 15px 24px;
+}
+
+i {
+	font-style: italic;
+}
+
+.small {
+	margin: 0px;
+	padding: 0px;
+	font-size: 9px;
+}
+
+.membersheaderborder {
+    margin-top: 20px;
+	padding:0px; 
+	border-top: 3px solid #5FC8ED;	
+}
+
+/* Notification - Scroller */
+	.notification_scroll {
+		background-color: #ffe6e6;
+		margin: 10px auto 10px;
+		padding: 0;
+		width: 880px;
+		height: 33px;
+		z-index: 1;
+		border: 1px solid #a60000;
+		border-radius: 10px;
+	}
+
+	.notification_scroll p {
+		font-size: 17px;
+		line-height: 33px;
+	}
+	
+	marquee {
+		width: 640px;
+	}
+
+	.notification_click {
+		position: relative;
+		float: left;
+		background: #F6F0D5;
+		font-size: 17px;
+		line-height: 33px;
+		margin: 0;
+		padding: 0px 10px 0px 10px;
+		border-radius: 10px 0px 0px 10px;
+		border-right: 5px solid #917D17;
+	}
+
+	.pointer {
+		cursor: pointer;
+	}
+
+
+.service {
+	width: 400px;
+	height: 40px;
+	margin: 10px 0px 10px 20px;
+}
+
+.datebox {
+	min-width: 75px;
+}
+
+.button-form {  
+	display: inline-block;  
+	background: #f2f2f2;  
+	border: 1px solid #133562;  
+	margin: 2px 0px 2px 0px;
+	padding: 2px 2px 2px 2px;  
+	height: 30px;
+	color: #133562;  
+	font-size: 12px; 
+	border-radius: 3px;  
+	box-shadow: 0 1px 3px #ddd;  
+}
+
+.button-form-small {  
+	display: inline-block;  
+	background: #f2f2f2;  
+	border: 1px solid #133562;  
+	margin: 2px 0px 2px 0px;
+	padding: 2px 2px 2px 2px;  
+	color: #133562;  
+	font-size: 12px; 
+	border-radius: 3px;  
+	box-shadow: 0 1px 3px #ddd;  
+}
+
+.button-form-xsmall {  
+	display: inline-block;  
+	background: #f2f2f2;  
+	border: 1px solid #133562;  
+	margin: 2px 0px 2px 0px;
+	padding: 2px 2px 2px 2px;  
+	color: #133562;  
+	font-size: 11px; 
+	border-radius: 3px;  
+	box-shadow: 0 1px 3px #ddd;  
+}
+
+.attestation_box {
+	position: relative;
+	float: right;
+	width: 295px;
+	background: #EEE;
+	padding: 0px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+.attestation_box table, .attestation_box td, .attestation_box th {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+}
+
+.box {
+	background: #EEE;
+	padding: 3px 0px 3px 0px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+.box table, .box td, .box th {
+	padding-top: 0px;
+	border: 0px;
+}
+
+.opacity {
+	opacity: 0.3;
+}
+
+#fadeout {
+	position: absolute;
+	top: -50px;
+	right: 190px;
+	width: 300px;
+	background: #feffc7;
+	padding: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	box-shadow: 0 8px 6px -6px #777;
+	font-weight: bold;
+	z-index: 999;
+}
+
+.select {
+	padding: 5px;
+	border: 1px solid #AAA;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 5px #CCC;
+}
+
+
+/* ................. 2. Table Styles ................... */
+
+table {
+	border-top: 0px solid #999;
+	border-bottom: 1px solid #999;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	}
+
+table.main {
+	border: 0px solid #999;
+	padding: 0px;
+	}
+	
+table.noborder {
+	border: 0px;
+	}
+	
+table.noborder td {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	}
+	
+th {
+	text-align:left;
+	padding:3px 6px 3px 3px;
+	border-top:1px solid #999;
+	}
+
+td {
+	padding:3px 6px 3px 3px;
+	border-top:1px solid #999;
+	}
+	
+th.red,td.red  {
+	background-color: #FF5050;
+}
+
+th.yellow,td.yellow  {
+	background-color: #fdff8c;
+}
+
+th.grey,td.grey  {
+	background-color: #CCCCCC;
+}
+
+th.blue,td.blue  {
+	background-color: #6796f5;
+}
+
+th.green,td.green {
+	background-color: #9F9;
+}
+
+.credtable td {
+	vertical-align: middle !important;
+	line-height: 13px;
+}
+
+/* ................. 3. pharm homepage/landing pages ................... */
+
+.header-block {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+}
+
+.main_logo {
+  height: auto;
+  max-width: 13%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header_line { 
+  padding: 0px;
+  margin: 0px;
+  background-color: #FFF;
+  border-top: 3px solid #5FC8ED
+}
+
+#header_bg {
+	position: relative;
+	height: 40px;	
+	width: 980px;
+	padding-top: 15px;
+	margin: auto;
+	margin-top: 20px;
+	background: #5FC8ED;
+	text-align: center;
+	font-size: 20px;
+	color: #FFF;
+	z-index: 300;
+}
+
+#header_front {
+	position: relative;
+	margin: 0 auto;
+	width: 900px;
+	height: 118px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	z-index: 200;
+}
+	
+#wrapper {
+	position: relative;
+	background: #FFF;
+	/* background:#fff url('../images/mainbody_bg.jpg') no-repeat right top; */
+	margin: 0 auto;
+	padding: 10px;
+	width: 960px;
+	min-height: 350px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#mainbody_front {
+    float: left;
+    margin-top: 0;
+    padding: 15px 5px 15px 22px;
+    position: relative;
+    text-align: left;
+    width: 650px;
+    z-index: 3;
+}
+
+#mainbody_front a {
+  color: #133562;
+}
+
+#mainbody_front a:hover {
+  text-decoration: underline;
+}
+	
+.box_home {
+	position: relative;
+	display: inline-block;
+	float: left;
+	background: #FFF;
+	padding: 4px;
+	margin: 4px 4px 10px 4px;
+	width: 864px;
+	border: 1px solid #133562;
+	border-radius: 5px;
+	box-shadow: 0 8px 6px -6px #444;
+}
+
+.box_home:hover {
+	background: #f6f0d5;
+}
+
+.box_third {
+	float: left; 
+	width: 28%; 
+	padding: 1%; 
+	margin: 1%; 
+	min-height: 60px; 
+	border: 1px solid #133562; 
+	border-radius: 5px;
+}
+
+.box_half {
+	float: left; 
+	width: 45%; 
+	padding: 1%; 
+	margin: 1%; 
+	min-height: 60px; 
+}
+
+.box_half_b {
+	float: left; 
+	width: 45%; 
+	padding: 1%; 
+	margin: 1%; 
+	min-height: 60px; 
+	border: 1px solid #133562; 
+	border-radius: 5px;
+}
+
+
+	
+#details_front {
+	float: right;
+	width: 260px;
+	height: 100px;
+	padding: 6px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	background: #d9ca79;
+	background-image:url('../images/tan_bg_grad2.jpg');
+	
+	/*...border-radius...*/
+	-moz-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+	}
+	
+#details_front img {
+	padding-top: 13px;
+	}
+	
+#details_front h2 {
+	font-size: 18px;
+	padding-left: 25px;
+	}
+	
+#postings {
+	padding: 20px 50px 10px 20px;
+	}
+	
+#postings h2 {
+	padding: 10px 0px 10px 30px;
+	color: #a98d6a;
+	background-image:url('../images/arrow.jpg');
+	background-repeat:no-repeat;
+	background-position: left;
+	display: block;
+	}
+	
+#postings p {
+	padding-left: 35px;
+	}
+	
+/* ................. 4. pharm homepage/landing pages Nav ................... */
+
+#nav_mobile {
+	display: none;
+}
+
+#nav_bg {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	background: #d8c98d;
+	/*
+	background-image:url('../images/nav.png');
+	background-repeat:repeat-x;
+	background-position: center;
+	*/
+	box-shadow: 0 8px 6px -8px #444;
+	}
+
+#nav_container {
+	position: relative;
+	margin: 0 auto 0;
+	width: 900px;
+	}
+	
+#nav{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	width: 900px;
+	list-style:none;
+	font-weight:bold;
+	/* Clear floats */
+	float:left;
+}
+#nav li{
+	float:left;
+	position:relative;
+	margin: 0px;
+	padding: 0px 10px 0px 0px;
+}
+#nav a{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color:#fff;
+	text-decoration:none;
+}
+#nav a:hover{
+	background: #FFF;
+	color: #5FC8ED;
+	text-decoration:none;
+}
+
+#nav .nav_title {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color:#fff;
+	text-decoration: underline;
+}
+
+#services_dropdown {
+	background: #f6f0d5;
+	position: relative;
+	margin: 0 auto 0;
+	padding: 15px;
+	width: 870px;
+	border-bottom: 2px solid #d8c98d;
+	}
+	
+.ui-front {
+    z-index:1000000 !important; /* The default is 100. !important overrides the default. */
+}
+
+
+	
+/* ................. 5. pharm homepage/landing pages Footer ................... */
+
+#pre_footer {
+	display: block;
+	margin: 0px;
+	width: 100%;
+	height: 20px;
+	background-color: #133562;
+}
+	
+#footer { 
+	display: block;
+	margin: 0px;
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	background-color: #5FC8ED;
+	font-size: 10px; 
+	color: #FFF;
+}
+
+#footer a {
+	color: #7a0607;
+}
+
+#footer table {
+	width: 475px;
+	margin: 2px auto 0;
+}
+
+#menu {
+	display: none;
+}
+
+.mobile_only {
+	display: none;
+}
+
+.tdNoBorder {
+	border-bottom: 0px;
+	border-top: 0px;
+}
+.tableNoBorder {
+	border-bottom: 0px;
+	border-top: 0px;
+}
+
+
+/*Styles for screen 768px and lower*/
+@media only screen and (max-width : 768px) {
+
+	.desktop_only {
+		display: none;
+	}
+
+	.mobile_only {
+		display: block;
+	}
+	
+	.notification_click {
+		font-size: 8px;
+	}
+	
+	.notification_scroll {
+		width: 100%;
+	}
+	marquee {
+		width: 58%;
+	}
+
+	#header_front {
+		width: 100%;
+		height: 100%;
+		}
+
+	#pharm_graphic {
+		float: none;
+		max-width: 100%;
+		}
+		
+	#pharm_graphic img {
+		max-width: 100%;
+		}
+		
+	#login {
+		display: none;
+	}
+	
+	#nav_mobile {
+		display: block;
+	}
+	
+	#nav_bg {
+		width: 100%;
+		
+	}
+	
+	#nav_container {
+		width: 100%;
+	}
+	
+	#nav {
+		display: block;
+		width: 96%;
+		padding: 2%;
+		background: #d8c98d;
+	}
+	
+	#nav li {
+		width: 100%;
+		border-bottom: 1px solid #917d17;
+	}
+	
+	#nav li a:hover {
+		text-decoration: none;
+		background: none;
+		color: #FFF;
+	}
+	
+	#nav li:last-child {
+		border-bottom: 0px solid #917d17;
+	}
+	
+	#nav li ul li {
+		position: relative;
+		width: 96%;
+		text-decoration:none;
+		list-style:none;
+		margin: 0px 0px 0px 4%;
+		border-bottom: 0px solid #917d17;
+	}
+	
+
+	#nav li ul a{
+		font-weight: 400;
+		color:#fff;
+		text-decoration:none;
+		line-height: 16px;
+	}
+	
+	#nav li ul a:hover {
+		text-decoration: none;
+		background: none;
+		color: #FFF;
+	}
+
+	#wrapper {
+		width: 88%;
+		margin: 0% 3% 0% 3%;
+		padding: 3% 3% 3% 3%;
+	}
+	
+	.box_home {
+		position: relative;
+		display: inline-block;
+		float: left;
+		background: #FFF;
+		padding: 2%;
+		margin: 4px 2% 10px 2%;
+		width: 92%;
+		border: 1px solid #000;
+		border-radius: 5px;
+		box-shadow: 0 8px 6px -6px #444;
+	}
+	
+	.box_third, .box_half, .box_half_b {
+		float: none; 
+		width: 96%; 
+		padding: 1%; 
+		margin: 5px 1% 15px 1%; 
+	}
+	
+	#footer { 
+		width: 88%;
+		margin: 0% 3% 0% 3%;
+		padding: 3% 3% 3% 3%;
+	}
+
+	#footer table {
+		text-align: center;
+		max-width: 100%;
+		margin: 10px auto 0;
+	}
+	
+	
+	#menu {
+		width: 94%;
+		padding: 3% 3% 3% 3%;
+		margin: 0px;
+		display: inline;
+		font-size: 1.35em;
+		line-height: 40px;
+		text-align: center;
+	}
+	#nav.js {
+			display: none;
+	}
+	#nav ul {
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+			border-right:none;
+	}
+	#nav li {
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+			border-right:none;
+	}
+	
+}
+
+@media screen and (min-width: 769px) {
+		#menu {
+				display: none;
+		}
+}
+
+.tab20 {
+	padding-left: 20px;
+}
+
+.indent {
+	margin-left: 15px;
+}
+
+.fade {
+	color: #AAA;
+	margin: -15px 0px 15px 15px;
+}
+
+.error {
+	color: #F00;
+}
+
+.notice {
+	color: #F00;
+	font-size: 18px;
+}
+
+.download {
+	margin: 0px 0px 0px 20px;
+	padding-top: 20px;
+	font-size: 20px;
+}
+.download img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.programs {
+	width: 640px;
+}
+
+.tpp {
+	width: 150px;
+	background-color: #DDD;
+	font-weight: bold;
+}
+
+.plan {
+	background-color: #DDD;
+}
+
+.accept {
+	width: 160px;
+	background-color: #fccc40;
+}
+
+.review_page {
+	position: relative;
+	width: 630px;
+	margin: 15px 4px 10px 4px;
+	padding: 8px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+.servicesbox {
+	position: relative;
+	width: 600px;
+	height: 100%;
+	margin: 4px 4px 10px 4px;
+	padding: 8px 8px 20px 8px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+.review_link {
+	position: relative;
+	float: right;
+}
+
+.review_page_title {
+	padding: 10px 0px 5px 0px;
+}
+
+.review_title {
+	font-family: 'Oxygen', arial, helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	margin: 0px 0px 5px 0px;
+	color:#000;
+}
+
+.data {
+	margin: 0px 0px 0px 8px;
+	padding: 0px;
+	min-height: 15px;
+}
+
+.rrx-generic-wrapper {
+	position: relative;
+	width: 100%;
+	margin: 4px 10px 10px 10px;
+}
+
+/*Two Column Divs Layout*/
+.rrx-two-column-wrapper {
+	position: relative;
+	width: 100%;
+	margin: 4px 10px 10px 10px;
+}
+
+.rrx-two-column {
+position: relative;
+float: left;
+width: 46%;
+padding: 0% 4% 0% 0%;
+}
+
+.rrx-two-column-small {
+position: relative;
+float: left;
+width: 18%;
+padding: 0% 4% 0% 0%;
+}
+
+.rrx-two-column-large {
+position: relative;
+float: left;
+width: 70%;
+padding: 0% 4% 0% 0%;
+}
+
+.field_title {
+	font-family: 'Oxygen', arial, helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	margin: 0px 0px 5px 0px;
+	color:#133562;
+}
+
+
+/* Text Inputs */
+.rrx-input-text-form {  
+	margin: 0px 0px 25px 0px;
+	padding: 7px;
+	border: 1px solid #133562;
+	width: 250px;
+
+	border-radius: 3px;  
+	box-shadow: inset 0 1px 7px rgba(0, 0, 0, 0.1);  
+}  
+	  
+.rrx-input-text-form:focus {  
+	outline: none;  
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);  
+} 
+
+.rrx-dropdown-form {
+	padding: 7px;
+	margin: 0px 0px 25px 0px;
+	border: 1px solid #133562;	
+}
+
+.clear {
+position: relative;
+clear: both;
+}
+
+.checkbox {
+float: left;
+padding: 5px 0px 0px 0px;
+}
+
+.checkboxcopy {
+float: left;
+padding: 0px 0px 0px 10px;
+}
+
+
+.small_example {
+	font-size: 9px; 
+	color: #777;
+}
+
+/* ................. 6. homepage/landing pages Sidebar ................... */
+
+/* required to avoid jumping */
+#sidebarWrapper {
+	position: relative;
+	float: right;
+	width: 250px;
+	min-height: 350px;
+	margin: 0px 0px 24px 0px;
+}
+
+#sidebar {
+	position: relative;
+	width: 240px;
+	top: 0;
+	/* just used to show how to include the margin in the effect */
+	margin: 0px;
+	padding: 10px 0px 0px 10px;
+	min-height: 300px;
+	background-color: #f2f2f2;
+	color: #133562;
+}
+
+#sidebar p {
+	padding-right: 8px;
+}
+
+#sidebar.fixed {
+	position: fixed;
+	padding-top: 20px;
+	top: 0px;
+}
+
+/* Activity Log */
+
+.partner_rrx {
+	margin: 0 0 0 0;
+	padding: 10px 0 10px 0;
+	min-height: 50px;
+	border-bottom: 1px solid #CCC;
+}
+.partner_rrx div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 250px;
+	text-align: center;
+}
+.partner_rrx p {
+	display: inline;
+	vertical-algin: middle;
+	margin: 0 0 0 25px;
+}
+.partner_rrx img {
+	max-width: 200px;
+	vertical-align: middle;
+	display: inline;
+}
+	
+/* ................. 7. homepage/landing pages Footer ................... */
+	
+div#pharmfooter_front { 
+	position: relative;
+	margin: 20px 0px 10px -10px;
+	float: left;
+	width: 100%;
+	background-color: #5FC8ED;
+	height: auto;
+	min-height: 50px;
+	padding: 10px 20px 10px 20px;
+	text-align: left;
+	font-size:12px; 
+	color:#FFF;
+	}
+	
+div#pharmfooter_front p {
+	color: #000;
+	}
+
+
+
+
